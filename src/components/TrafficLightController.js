@@ -7,21 +7,22 @@ function TrafficLightController(){
  
   const [light, setLight] = useState({id: 1, name: "First", color: "green"});
 
-  const lights =[{
-    id: 0,
-    name: "First",
-    color: "green"
-  },
-  {
-    id: 1,
-    name: "Second",
-    color: "green"
-  },
-  {
-    id: 2,
-    name: "Third",
-    color: "green"
-  }
+  const lights =[
+    {
+      id: 0,
+      name: "First",
+      color: "green"
+    },
+    {
+      id: 1,
+      name: "Second",
+      color: "green"
+    },
+    {
+      id: 2,
+      name: "Third",
+      color: "green"
+    }
   ]
   const next = (name, color) => {
     
