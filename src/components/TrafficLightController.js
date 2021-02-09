@@ -5,60 +5,35 @@ import TrafficLight from './TrafficLight'
 
 function TrafficLightController(){
  
-  const [color, setColor] = useState("green");
- 
-  const nextFirst = (color) => {
-    const colors = ["green", "yellow", "red"];
-    let currColor;
-    console.log(name);
-    if (color === colors[0]) {
-            currColor = colors[1];
-    } else if (color === colors[1]) {
-            currColor = colors[2];
-    } else {
-            currColor = colors[0];
-    }
-    setColor(currColor);
-    
-  };
+  const [light, setLight] = useState({id: 1, name: "First", color: "green"});
 
-  const nextSecond = (color) => {
-    const colors = ["green", "yellow", "red"];
-    let currColor;
-    console.log(name);
-    if (color === colors[0]) {
-            currColor = colors[1];
-    } else if (color === colors[1]) {
-            currColor = colors[2];
-    } else {
-            currColor = colors[0];
-    }
-    setColor(currColor);
-    
-  };
-
-
-  const nextThird= (color) => {
-    const colors = ["green", "yellow", "red"];
-    let currColor;
-    console.log(name);
-    if (color === colors[0]) {
-            currColor = colors[1];
-    } else if (color === colors[1]) {
-            currColor = colors[2];
-    } else {
-            currColor = colors[0];
-    }
-    setColor(currColor);
+  const lights =[{
+    id: 0,
+    name: "First",
+    color: "green"
+  },
+  {
+    id: 1,
+    name: "Second",
+    color: "green"
+  },
+  {
+    id: 2,
+    name: "Third",
+    color: "green"
+  }
+  ]
+  const next = (name, color) => {
     
   };
 
   return(
     <>
-      <TrafficLight key="0" name="First" color={color} cb={nextFirst} />
-      <TrafficLight key="1" name="Second" color={color} cb={nextSecond} />
-      <TrafficLight key="2" name="Third" color={color} cb={nextThird} />
-      
+      <TrafficLight id={lights[0].id} name={lights[0].name} color={lights[0].color} />
+
+      <TrafficLight id={lights[1].id} name={lights[1].name} color={lights[1].color} />
+
+      <TrafficLight id={lights[2].id} name={lights[2].name} color={lights[2].color} />
     </>
   )
 }
